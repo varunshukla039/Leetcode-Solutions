@@ -1,4 +1,4 @@
-https://leetcode.com/problems/smallest-even-multiple/description/
+#https://leetcode.com/problems/smallest-even-multiple/description/
 
 class Solution:
     def smallestEvenMultiple(self, n: int) -> int:
