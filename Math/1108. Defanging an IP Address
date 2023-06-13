@@ -1,0 +1,6 @@
+https://leetcode.com/problems/defanging-an-ip-address/description/
+
+class Solution(object):
+    def defangIPaddr(self, address):
+        address=address.replace(".","[.]")
+        return address
