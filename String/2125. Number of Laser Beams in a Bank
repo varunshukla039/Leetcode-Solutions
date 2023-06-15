@@ -1,0 +1,12 @@
+https://leetcode.com/problems/number-of-laser-beams-in-a-bank/
+
+class Solution:
+    def numberOfBeams(self, bank: List[str]) -> int:
+        prev=ans=0
+        for i in bank:
+            s=i.count("1")
+            if s:
+                ans+=prev*s
+                prev = s
+        return ans
+                
