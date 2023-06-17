@@ -1,1 +1,6 @@
 https://leetcode.com/problems/reverse-words-in-a-string-iii/description/
+
+class Solution(object):
+    def reverseWords(self, s):
+        s=map(lambda x:x[::-1] , s.split(' '))
+        return ' '.join(s)
