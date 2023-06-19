@@ -1,4 +1,4 @@
-
+https://leetcode.com/problems/count-pairs-of-similar-strings/description/
 
 class Solution:
     def similarPairs(self, words: List[str]) -> int:
