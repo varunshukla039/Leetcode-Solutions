@@ -1,1 +1,9 @@
 
+
+class Solution(object):
+    def restoreString(self, s, indices):
+        s1=""
+        for i in range(len(indices)):
+            s1=s1+s[indices.index(i)]
+            
+        return s1
