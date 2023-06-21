@@ -1,1 +1,13 @@
 
+
+class Solution:
+    def findSmallestSetOfVertices(self, n: int, edges: List[List[int]]) -> List[int]:
+        t=[i for i in range (n)]
+        x=set([i[1] for i in edges])
+        z=[]
+        for i in t:
+            if i not in x :
+                z.append(i)
+        if len(z)==0 :
+            return [0]
+        return z
