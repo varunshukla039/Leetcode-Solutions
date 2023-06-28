@@ -1,1 +1,10 @@
 https://leetcode.com/problems/destination-city/
+
+class Solution:
+    def destCity(self, paths: List[List[str]]) -> str:
+        source=[]
+        dest=[]
+        for i in paths:
+            source.append(i[0])
+            dest.append(i[1])
+        return list(set(dest).difference(source))[0]
