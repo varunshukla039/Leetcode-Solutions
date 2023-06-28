@@ -1,1 +1,15 @@
 
+
+class Solution:
+    def minOperations(self, boxes: str) -> List[int]:
+        l1=[]
+        for i ,x in enumerate(boxes):
+            if x=='1':
+                l1.append(i)
+        l2=[]
+        for i in range(len(boxes)):
+            a=0
+            for idx in l1:
+                a+=abs(i-idx)
+            l2.append(a)
+        return l2
