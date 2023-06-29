@@ -1,4 +1,4 @@
-
+https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays/description/
 
 class Solution:
     def findThePrefixCommonArray(self, A: List[int], B: List[int]) -> List[int]:
