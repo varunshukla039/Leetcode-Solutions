@@ -1,2 +1,12 @@
 https://leetcode.com/problems/sort-the-people/description/
 
+class Solution:
+    def sortPeople(self, names: List[str], heights: List[int]) -> List[str]:
+        dct={}
+        lst=[]
+        for index in range (len(heights)):
+            dct[heights[index]]= names[index]
+        heights.sort(reverse=True)
+        for height in heights:
+            lst.append(dct[height])
+        return lst
