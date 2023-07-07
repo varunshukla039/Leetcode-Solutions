@@ -1,1 +1,19 @@
 https://leetcode.com/problems/arithmetic-subarrays/description/
+
+class Solution(object):
+    def checkArithmeticSubarrays(self, nums, l, r):
+        result=[]
+        for i in range (len(l)):
+            lst1=nums[l[i]:r[i]+1]
+            lst1.sort()
+            
+            diff=lst1[1]-lst1[0]
+            check_ari=True
+           
+            for j in range (len(lst1)-1):
+                if diff!=lst1[j+1]-lst1[j]:
+                    check_ari=False
+                    break
+
+            result.append(check_ari)
+        return result
