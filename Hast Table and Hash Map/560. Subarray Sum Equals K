@@ -1,0 +1,16 @@
+https://leetcode.com/problems/subarray-sum-equals-k/description/
+
+class Solution:
+    def subarraySum(self, nums: List[int], k: int) -> int:
+        count=0
+        cache={0:1}
+        sum=0
+        for num in nums:
+            sum+=num
+            if sum-k in cache:
+                count+=cache[sum-k]
+            if sum in cache:
+                cache[sum]+=1
+            else:
+                cache[sum]=1
+        return count
