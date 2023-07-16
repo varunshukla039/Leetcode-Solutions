@@ -1,0 +1,11 @@
+https://leetcode.com/problems/largest-odd-number-in-string/description/
+
+class Solution:
+    def largestOddNumber(self, num: str) -> str:
+        last_odd_index = -1
+
+        for i in range(len(num)):
+            if int(num[i]) % 2 != 0:
+                last_odd_index = i
+        return num[:last_odd_index+1]
+
