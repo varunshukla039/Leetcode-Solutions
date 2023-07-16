@@ -1,0 +1,14 @@
+https://leetcode.com/problems/rotate-string/description/
+
+class Solution:
+    def rotateString(self, s: str, goal: str) -> bool:   
+        s1=''
+        l1=[]
+        for i in range (len(s)):
+            s1+=s[-1]+s[0:-1]
+            l1.append(s1)
+            s=s1
+            s1=''    
+        for j in l1:
+            if j==goal:
+                return True 
