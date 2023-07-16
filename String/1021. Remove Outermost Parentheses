@@ -1,0 +1,21 @@
+https://leetcode.com/problems/remove-outermost-parentheses/description/
+
+class Solution(object):
+    def removeOuterParentheses(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        count=0
+        s1=''
+        
+        for i in s:
+            if i=='(':
+                count+=1
+                if count >1:
+                    s1+=i
+            if i ==")":
+                count-=1
+                if count>0:
+                    s1+=i
+        return s1
