@@ -1,1 +1,21 @@
 https://leetcode.com/problems/sum-of-beauty-of-all-substrings/description/
+
+class Solution:
+    def beautySum(self, s: str) -> int:
+        l1=[]
+        for i in range (len(s)):
+            s1=''
+            for j in range (i,len(s)):
+                s1+=s[j]
+                l1.append(s1)
+        sum=0
+        for i in l1:
+            maxnum=-999
+            minnum=999
+            for j in set(i):
+                if i.count(j)>maxnum:
+                    maxnum=i.count(j)
+                if i.count(j)<minnum:
+                    minnum=i.count(j)
+            sum+=maxnum-minnum      
+        return sum
