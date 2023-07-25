@@ -1,0 +1,22 @@
+https://leetcode.com/problems/set-matrix-zeroes/description/
+
+class Solution:
+    def setZeroes(self, matrix: List[List[int]]) -> None:
+        """
+        Do not return anything, modify matrix in-place instead.
+        """
+        rowsofzero=set()
+        colofzero=set()
+        m=len(matrix)
+        n=len(matrix[0])
+    
+        for i in range (m):
+            for j in range (n):
+                if matrix[i][j]==0:
+                    rowsofzero.add(i)
+                    colofzero.add(j)
+        
+        for i in range (m):
+            for j in range (n):
+                if i in rowsofzero or j in colofzero:
+                    matrix[i][j]=0
