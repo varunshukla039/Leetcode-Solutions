@@ -1,0 +1,10 @@
+https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/description/
+
+class Solution:
+    def countGoodSubstrings(self, s: str) -> int:
+        count=0
+        for i in range (len(s)-2):
+            s1=s[i:i+3]
+            if s1.count(s1[0])==1 and s1.count(s1[1])==1 and s1.count(s1[2])==1:
+                count+=1
+        return count
