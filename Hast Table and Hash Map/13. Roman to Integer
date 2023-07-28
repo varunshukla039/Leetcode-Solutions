@@ -1,1 +1,19 @@
 https://leetcode.com/problems/roman-to-integer/description/
+
+using inputs as arrays
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        roman=['M','D','C','L','X','V','I']
+        integers=[1000,500,100,50,10,5,1]
+        sum=0
+        for i in range (len(s)):
+            for j in range (len(roman)):
+                if s[i]==roman[j]:
+                    if (i+1)<len(s) and integers[j]<integers[roman.index(s[i+1])]:
+                        sum-=integers[j]
+                    else:
+                        sum+=integers[j]
+                    break
+        return sum
+
+using hash map
