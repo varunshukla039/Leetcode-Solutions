@@ -1,0 +1,18 @@
+https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+
+class Solution:
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
+        l1=[]
+        for i in range(len(nums)) :
+            if nums[i]==target:
+                l1.append(nums.index(target))
+                nums[i]=" "
+        if len(l1)==1:
+            return l1+l1
+        l2=[]
+        if len(l1)>1:
+            l2.append(l1[0])
+            l2.append(l1[-1])
+            return l2
+        else:
+            return [-1,-1]
