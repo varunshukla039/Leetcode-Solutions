@@ -8,3 +8,4 @@ class Solution:
         #         countmax=nums[i]
         # return nums.index(countmax)
         return nums.index(max(nums))
+
