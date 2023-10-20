@@ -8,3 +8,4 @@ class Solution:
             source.append(i[0])
             dest.append(i[1])
         return list(set(dest).difference(source))[0]
+
