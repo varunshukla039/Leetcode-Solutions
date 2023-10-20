@@ -18,3 +18,4 @@ class Solution:
             newnode=newnode.next
             current=current.next
         return result.next
+
