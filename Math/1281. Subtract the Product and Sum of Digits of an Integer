@@ -9,3 +9,4 @@ class Solution:
             product*=i
             sum+=i
         return product-sum
+
