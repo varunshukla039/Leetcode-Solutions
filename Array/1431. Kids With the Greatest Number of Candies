@@ -9,4 +9,3 @@ class Solution:
             else :
                 l2.append(False)
         return l2
-
