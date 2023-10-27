@@ -12,3 +12,5 @@ class Solution(object):
             node.val=val
             node.next=node.next.next
             break
+
+
