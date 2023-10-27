@@ -9,3 +9,7 @@ class Solution:
                 d1[sort1[i]]=i
         return [d1[j] for j in nums]
         
+
+
+
+;
