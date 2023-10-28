@@ -17,3 +17,6 @@ class Solution(object):
 
             result.append(check_ari)
         return result
+
+
+
